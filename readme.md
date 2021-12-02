@@ -1,3 +1,3 @@
 # readme.md
 
-- this is sandbox.
+- this repository is a sandbox.
