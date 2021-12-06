@@ -17,8 +17,6 @@ def main():
     exit()
 
   cnt = max if max < cnt else cnt
-  # if max < cnt:
-  #   cnt = max
    
   lst = [i for i in range(1, max + 1)]
   num = []
