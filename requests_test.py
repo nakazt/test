@@ -5,10 +5,10 @@ import re
 import requests
 
 def main():
-  opt = sys.argv[1] if len(sys.argv) != 1 else ""
+  zip_code = sys.argv[1] if len(sys.argv) != 1 else ""
 
-  if re.match('^[0-9]{7}$', opt):
-    params = { 'zipcode': {int(opt)} }
+  if re.match('^[0-9]{7}$', zip_code):
+    params = { 'zipcode': {int(zip_code)} }
   else:
     print(f'Usage: {sys.argv[0]} <zip code>\n')
     sys.exit()
@@ -25,7 +25,7 @@ def main():
     address = results['address1'] + results['address2'] + results['address3']
     print(address)
   else:
-    print(f'zip code error({opt}: {res_json["results"]})')
+    print(f'zip code error({zip_code}: {res_json["results"]})')
 
 if __name__ == '__main__':
   main()
